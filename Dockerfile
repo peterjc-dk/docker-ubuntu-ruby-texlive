@@ -14,6 +14,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y --force-yes install swftools
 RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections
 RUN apt-get install -y --quiet ttf-mscorefonts-installer
 
+# download and install texlive
 ADD https://raw.githubusercontent.com/harshjv/docker-texlive-2015/master/install-tl-ubuntu install-tl-ubuntu
 RUN chmod +x install-tl-ubuntu 
 
