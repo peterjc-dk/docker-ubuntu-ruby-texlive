@@ -1,5 +1,4 @@
 FROM peterjc/ubuntu-ruby
-MAINTAINER Harsh Vakharia <harshjv@gmail.com>
 
 ENV HOME /root
 ENV DEBIAN_FRONTEND noninteractive
@@ -26,7 +25,3 @@ RUN apt-get clean && \
            /var/tmp/*
 
 ENV PATH /opt/texbin:$PATH
-
-VOLUME /var/texlive
-
-WORKDIR /var/texlive
